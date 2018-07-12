@@ -1,0 +1,27 @@
+AppBundle\Entity\TblProductCategory:
+    type: entity
+    table: tbl_product_category
+    repositoryClass: AppBundle\Repository\TblProductCategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categoryId:
+            type: integer
+            column: category_id
+        productId:
+            type: integer
+            column: product_id
+        status:
+            type: smallint
+        createdAt:
+            type: datetime
+            nullable: true
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+    lifecycleCallbacks: {  }

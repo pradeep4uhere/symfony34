@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}User Update{% endblock %}
+{% block body %}
+<h1>User Registration</h1>
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-sm-10" style="background-color:lavender;">
+    	{{ form_row(form.firstName,{'value':user.getFirstName,'label':'First Name '}) }}
+    </div>
+    <div class="col-sm-12" style="background-color:lavenderblush;">
+	   	{{ form_row(form.lastName,{'value':user.getLastName}) }}
+    </div>
+    <div class="col-sm-12" style="background-color:lavenderblush;">
+		{{ form_row(form.mobile,{'value':user.getMobile}) }}    	
+    </div>
+    <div class="col-sm-12" style="background-color:lavenderblush;">
+    	{{ form_row(form.email,{'value':user.getEmail}) }}
+    </div>
+  </div>
+{{ form_end(form) }}
+{% endblock %}

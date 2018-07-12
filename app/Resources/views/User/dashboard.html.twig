@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:User:dashboard{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <h3>Welcome Back</h3>
+  <p>All User List. <a href="{{path('user_new')}}">Create New</a></p>
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;">FirstName</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">LastName</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">Email</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">Mobile</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">Username</div>
+    <div class="col-sm-2" style="background-color:lavender;">Action</div>
+  </div>
+  {% for userObj in user %}
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;">{{ userObj.getFirstName}}</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">{{ userObj.getLastName}}</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">{{ userObj.getEmail}}</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">{{ userObj.getMobile}}</div>
+    <div class="col-sm-2" style="background-color:lavenderblush;">{{ userObj.getUsername}}</div>
+    <div class="col-sm-2" style="background-color:lavender;"><a href="{{path('user_edit',{id:userObj.getId})}}">Edit</a> | Delete</div>
+  </div>
+ {% endfor %}
+</div>
+{% endblock %}
