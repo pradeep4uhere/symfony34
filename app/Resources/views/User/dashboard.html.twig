@@ -1,8 +1,8 @@
 {% extends "base.html.twig" %}
-
 {% block title %}AppBundle:User:dashboard{% endblock %}
 
 {% block body %}
+{% include 'User/menu.html.twig'%}
 <div class="container-fluid">
   <h3>Welcome Back</h3>
   <p>All User List. <a href="{{path('user_new')}}">Create New</a></p>

@@ -1,0 +1,177 @@
+
+--
+-- Table structure for table `tbl_master_unit`
+--
+
+CREATE TABLE `tbl_master_unit` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `parent_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_master_unit`
+--
+
+INSERT INTO `tbl_master_unit` (`id`, `name`, `parent_id`) VALUES
+(1, 'Area', 0),
+(2, 'Data Transfer Rate', 0),
+(3, 'Digital Storage', 0),
+(4, 'Energy', 0),
+(5, 'Frequency', 0),
+(6, 'Fuel Economy', 0),
+(7, 'Length', 0),
+(8, 'Mass', 0),
+(9, 'Plane Angle', 0),
+(10, 'Pressure', 0),
+(11, 'Speed', 0),
+(12, 'Temperature', 0),
+(13, 'Time', 0),
+(14, 'Volume', 0),
+(15, 'Square kilometre', 1),
+(16, 'Square metre', 1),
+(17, 'Square foot', 1),
+(18, 'Square inch', 1),
+(19, 'Hectare', 1),
+(20, 'Acre', 1),
+(21, 'Bit per second', 2),
+(22, 'Kilobit per second', 2),
+(23, 'Kilobyte per second', 2),
+(24, 'Kibibit per second', 2),
+(25, 'Megabit per second', 2),
+(26, 'Megabyte per second', 2),
+(27, 'Mebibit per second', 2),
+(28, 'Gigabit per second', 2),
+(29, 'Gigabyte per second', 2),
+(30, 'Terabit per second', 2),
+(31, 'Terabyte per second', 2),
+(32, 'Tebibit per second', 2),
+(33, 'Kilobit', 3),
+(34, 'Kibibit', 3),
+(35, 'Megabit', 3),
+(36, 'Mebibit', 3),
+(37, 'Gigabit', 3),
+(38, 'Gibibit', 3),
+(39, 'Terabit', 3),
+(40, 'Tebibit', 3),
+(41, 'Petabit', 3),
+(42, 'Pebibit', 3),
+(43, 'Byte', 3),
+(44, 'Kilobyte', 3),
+(45, 'Kibibyte', 3),
+(46, 'Megabyte', 3),
+(47, 'Mebibyte', 3),
+(48, 'Gigabyte', 3),
+(49, 'Gibibyte', 3),
+(50, 'Terabyte', 3),
+(51, 'Tebibyte', 3),
+(52, 'Petabyte', 3),
+(53, 'Pebibyte', 3),
+(54, 'Joule', 4),
+(55, 'Kilojoule', 4),
+(56, 'Gram calorie', 4),
+(57, 'Kilocalorie', 4),
+(58, 'Watt hour', 4),
+(59, 'Kilowatt hour', 4),
+(60, 'Electronvolt', 4),
+(61, 'British thermal unit', 4),
+(62, 'US therm', 4),
+(63, 'Foot-pound', 4),
+(64, 'Hertz', 5),
+(65, 'Kilohertz', 5),
+(66, 'Megahertz', 5),
+(67, 'Gigahertz', 5),
+(68, 'US Miles per gallon', 6),
+(69, 'Miles per gallon (Imperial)', 6),
+(70, 'Kilometre per litre', 6),
+(71, 'Litre per 100 kilometres', 6),
+(72, 'Kilometre', 7),
+(73, 'Metre', 7),
+(74, 'Centimetre', 7),
+(75, 'Millimetre', 7),
+(76, 'Micrometre', 7),
+(77, 'Nanometre', 7),
+(78, 'Mile', 7),
+(79, 'Yard', 7),
+(80, 'Foot', 7),
+(81, 'Inch', 7),
+(82, 'Nautical mile', 7),
+(83, 'Tonne', 8),
+(84, 'Kilogram', 8),
+(85, 'Gram', 8),
+(86, 'Milligram', 8),
+(87, 'Microgram', 8),
+(88, 'Imperial ton', 8),
+(89, 'US ton', 8),
+(90, 'Stone', 8),
+(91, 'Pound', 8),
+(92, 'Ounce', 8),
+(93, 'Degree', 9),
+(94, 'Gradian', 9),
+(95, 'Milliradian', 9),
+(96, 'Minute of arc', 9),
+(97, 'Radian', 9),
+(98, 'Second of arc', 9),
+(99, 'Atmosphere', 10),
+(100, 'Bar', 10),
+(101, 'Pascal', 10),
+(102, 'Pound-force per square inch', 10),
+(103, 'Torr', 10),
+(104, 'Miles per hour', 11),
+(105, 'Foot per second', 11),
+(106, 'Metre per second', 11),
+(107, 'Kilometre per hour', 11),
+(108, 'Knot', 11),
+(109, 'Celsius', 12),
+(110, 'Fahrenheit', 12),
+(111, 'Kelvin', 12),
+(112, 'Nanosecond', 13),
+(113, 'Microsecond', 13),
+(114, 'Millisecond', 13),
+(115, 'Second', 13),
+(116, 'Minute', 13),
+(117, 'Hour', 13),
+(118, 'Day', 13),
+(119, 'Week', 13),
+(120, 'Month', 13),
+(121, 'Year', 13),
+(122, 'Decade', 13),
+(123, 'Century', 13),
+(124, 'US liquid gallon', 14),
+(125, 'US liquid quart', 14),
+(126, 'US liquid pint', 14),
+(127, 'US legal cup', 14),
+(128, 'US fluid ounce', 14),
+(129, 'US tablespoon', 14),
+(130, 'US teaspoon', 14),
+(131, 'Cubic metre', 14),
+(132, 'Litre', 14),
+(133, 'Millilitre', 14),
+(134, 'Imperial quart', 14),
+(135, 'Imperial pint', 14),
+(136, 'Imperial cup', 14),
+(137, 'Imperial fluid ounce', 14),
+(138, 'Imperial tablespoon', 14),
+(139, 'Imperial teaspoon', 14),
+(140, 'Cubic foot', 14),
+(141, 'Cubic inch', 14);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_master_unit`
+--
+ALTER TABLE `tbl_master_unit`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_master_unit`
+--
+ALTER TABLE `tbl_master_unit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;

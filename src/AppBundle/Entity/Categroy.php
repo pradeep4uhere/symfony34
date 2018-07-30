@@ -1,11 +1,12 @@
 <?php
 
 namespace AppBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * TblProductCategory
+ * Categroy
  */
-class TblProductCategory
+class Categroy
 {
     /**
      * @var int
@@ -13,19 +14,19 @@ class TblProductCategory
     private $id;
 
     /**
-     * @var int
+     * @var string
      */
-    private $categoryId;
+    private $name;
+
+    /**
+     * @var string
+     */
+    private $description;
 
     /**
      * @var int
      */
-    private $productId;
-
-    /**
-     * @var int
-     */
-    private $status;
+    private $parentId;
 
     /**
      * @var \DateTime
@@ -36,6 +37,18 @@ class TblProductCategory
      * @var \DateTime
      */
     private $updatedAt;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Category", mappedBy="category_id")
+     */
+    private $child;
+
+
+
+    public function __construct()
+    {
+        $this->child = new ArrayCollection();
+    }
 
 
     /**
@@ -49,75 +62,75 @@ class TblProductCategory
     }
 
     /**
-     * Set categoryId
+     * Set name
      *
-     * @param integer $categoryId
+     * @param string $name
      *
-     * @return TblProductCategory
+     * @return Categroy
      */
-    public function setCategoryId($categoryId)
+    public function setName($name)
     {
-        $this->categoryId = $categoryId;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get categoryId
+     * Get name
      *
-     * @return int
+     * @return string
      */
-    public function getCategoryId()
+    public function getName()
     {
-        return $this->categoryId;
+        return $this->name;
     }
 
     /**
-     * Set productId
+     * Set description
      *
-     * @param integer $productId
+     * @param string $description
      *
-     * @return TblProductCategory
+     * @return Categroy
      */
-    public function setProductId($productId)
+    public function setDescription($description)
     {
-        $this->productId = $productId;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get productId
+     * Get description
      *
-     * @return int
+     * @return string
      */
-    public function getProductId()
+    public function getDescription()
     {
-        return $this->productId;
+        return $this->description;
     }
 
     /**
-     * Set status
+     * Set parentId
      *
-     * @param integer $status
+     * @param integer $parentId
      *
-     * @return TblProductCategory
+     * @return Categroy
      */
-    public function setStatus($status)
+    public function setParentId($parentId)
     {
-        $this->status = $status;
+        $this->parentId = $parentId;
 
         return $this;
     }
 
     /**
-     * Get status
+     * Get parentId
      *
      * @return int
      */
-    public function getStatus()
+    public function getParentId()
     {
-        return $this->status;
+        return $this->parentId;
     }
 
     /**
@@ -125,7 +138,7 @@ class TblProductCategory
      *
      * @param \DateTime $createdAt
      *
-     * @return TblProductCategory
+     * @return Categroy
      */
     public function setCreatedAt($createdAt)
     {
@@ -149,7 +162,7 @@ class TblProductCategory
      *
      * @param \DateTime $updatedAt
      *
-     * @return TblProductCategory
+     * @return Categroy
      */
     public function setUpdatedAt($updatedAt)
     {

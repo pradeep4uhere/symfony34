@@ -13,14 +13,21 @@ AppBundle\Entity\Product:
             type: string
             length: 255
             nullable: true
-        descriptions:
+        description:
             type: string
             length: 255
             nullable: true
         price:
-            type: float
+            type: decimal
+            precision: 10
+            scale: '2'
             nullable: true
+        status:
+            type: binary
         createdAt:
             type: datetime
             column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
     lifecycleCallbacks: {  }

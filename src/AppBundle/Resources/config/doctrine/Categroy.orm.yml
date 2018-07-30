@@ -1,7 +1,7 @@
-AppBundle\Entity\Category:
+AppBundle\Entity\Categroy:
     type: entity
-    table: category
-    repositoryClass: AppBundle\Repository\CategoryRepository
+    table: null
+    repositoryClass: AppBundle\Repository\CategroyRepository
     id:
         id:
             type: integer
@@ -12,21 +12,20 @@ AppBundle\Entity\Category:
         name:
             type: string
             length: 255
-            nullable: true
         description:
             type: string
             length: 255
-            nullable: true
         parentId:
             type: integer
-            nullable: true
             column: parent_id
         createdAt:
             type: datetime
-            nullable: true
             column: created_at
         updatedAt:
             type: datetime
-            nullable: true
             column: updated_at
+    oneToMany:
+        child:
+            targetEntity: Categroy
+            mappedBy: category_id
     lifecycleCallbacks: {  }
